@@ -19,5 +19,6 @@ def create_app(settings_override=None):
         app.config.update(settings_override)
 
     app.register_blueprint(page)
-
+ 
     return app
+ 

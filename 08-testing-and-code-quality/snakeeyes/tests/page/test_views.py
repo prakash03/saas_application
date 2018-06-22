@@ -16,3 +16,11 @@ class TestPage(object):
         """ Privacy page should respond with a success 200. """
         response = client.get(url_for('page.privacy'))
         assert response.status_code == 200
+
+    def test_faqs_page(self,client):
+        response = client.get(url_for('page.faqs'))
+        assert response.status_code == 200
+
+    def test_title_page(self, client):
+        response = client.get(url_for('page.faqs'))
+        assert "title" in str(response.data)
